@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/ex04.html</title>
+</head>
+
+<body>
+    <form action="ex04.jsp" method="get">
+        <fieldset>
+        <legend>개인 정보 입력</legend>
+        아 이 디 : <input type="text" name="id">
+        <input type="submit" value="ID중복검사" 
+        <p></p>
+        생년월일 : <input type="date" name="birth">
+        <p></p>
+        성 별 : <input type="radio" name="sex" id="male" value="male">남자
+                <input type="radio" name="sex" id="female" value="female">여자
+        <p></p>
+        E-mail : <input type="email" name="myemail">       
+        <p></p>
+        메일수신 : <input type="radio" name="mail" value="수신동의">수신동의
+        <input type="radio" name="mail" value="수신거부">수신거부
+        <p></p> 
+        핸드폰 : <select name="phone" id="phone">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="070">070</option> 
+        </select> -
+            <input type="text" name="number" value=""> -
+            <input type="text" name="number1" value="">
+        <p></p>
+        직업 : <select name="jobs" id="jobs">
+            <option value="학생">학생</option>
+            <option value="회사원">회사원</option>
+            <option value="전문직">전문직</option>
+            <option value="무직">무직</option>
+        </select>
+        <p></p>
+        취미 : 
+        <input type="radio" name="Hb"" value="쇼핑">쇼핑
+        <input type="radio" name="Hb" value="인터넷">인터넷
+        <input type="radio" name="Hb" value="음악감상">음악감상
+        <input type="radio" name="Hb" value="독서">독서
+        <input type="radio" name="Hb" value="스포츠">스포츠
+        <p></p>
+        자기소개 : <textarea rows="5" name="self" cols="50"></textarea>
+    </fieldset>
+    <p></p>
+    <input type="submit" value="등록">
+    <input type="reset" value="초기화">
+    </form>
+</body>
+
+</html>
