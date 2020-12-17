@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/links.html</title>
+    <style>
+        a:link {
+            color: rgb(183, 145, 218); text-decoration: underline;
+        }
+        a:visited {
+            color: rgb(224, 188, 175);
+        }
+        /* hover > 커서를 가져다 놓을 때 */
+        a:hover {
+            text-decoration: overline;
+        }
+        /* active >> 클릭할 때 변하는 거 */
+        a:active {
+            color: lightgoldenrodyellow;
+        }
+        ul>li:hover {
+            color: lightskyblue;
+        }
+        /* last > 뒤에서부터 몇번째. */
+        ol>li:nth-last-child(2) {
+            background: rgb(120, 236, 120);
+        }
+        ul:nth-child(3) {
+            border: 2px solid sandybrown; 
+        }
+        /* ul만 가져와서 설정한다... */
+        ul:nth-of-type(3) {
+            border: 2px dotted rebeccapurple; 
+        }
+    </style>
 </head>
 <body>
     <a href = "link.html" target="_self">link 페이지</a>
