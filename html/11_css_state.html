@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/11_css_state.html</title>
     <style>
-        div {color: white;}
-        h2::first-letter {
-            font-size: 30px; color: red; text-transform: uppercase;
+        div {
+            color: white;
         }
+
+        h2::first-letter {
+            font-size: 30px;
+            color: red;
+            text-transform: uppercase;
+        }
+
         h3::first-line {
             color: blue;
         }
+
         input:focus {
             background-color: rgb(247, 182, 182);
         }
-        input:checked + div.d1 {
+
+        input:checked+div.d1 {
             background-color: gray;
         }
-        input:checked + div.d2 {
+
+        input:checked+div.d2 {
             background-color: black;
         }
     </style>
 </head>
+
 <body>
+    <!-- onClick="location.href='answer.html'" -->
     <h2>states pseudo-classes</h2>
     <h3>문제) 대한민국 수도는?</h3>
-    <p>정답 작성 : <input type="text"></p>
-    <input type="submit" value="제출">
+    <p>정답 작성 : <input type="text" id="answer"></p>
+    <input type="button" onclick="namef()" value="제출">
     <h2>answer</h2>
     힌트 보기 : <input type="checkbox">
     <div class="d1">
@@ -37,5 +49,27 @@
     <div class="d2">
         서울
     </div>
+    <script>
+        function namef() {
+            var a = document.getElementById('answer').value;
+            console.log(a);
+            if (a == "서울") {
+                alert("정답입니다~")
+            } else if (a != "서울") {
+                alert("틀렸습니다.");
+            }
+            // alert > 출력값을 보여줌. 
+        }
+    </script>
+    <!-- <script>
+        var a = document.getElementById('answer');
+        console.log(a.value);
+        if(a.value == "서울") {
+            document.write("정답입니다~")
+        } else if(a != "서울") {
+            document.write("틀렸습니다.");
+        }
+        </script> -->
 </body>
+
 </html>

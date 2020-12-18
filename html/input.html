@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/input.html</title>
     <style>
-        /* ^=  >> 시작하는 값이 t이면 바꿔라. */
+        input[type=text],
+        [type=password] {
+            width: 50%;
+            padding: 5px 5px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[id=user_id] {
+            width: 50%;
+            padding: 5px 5px;
+            margin: 5px 5px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit],
+        [type=reset] {
+            width: 17%;
+            background-color: rgb(204, 196, 196);
+            color: rgb(17, 16, 16);
+            padding: 3px 3px;
+            margin: 2px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #eaf8eb;
+        }
+        input[type=reset]:hover {
+            background-color: #eaf8eb;
+        }
+
+        div {
+            width: 20%;
+            border-radius: 2px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* ^=  >> 시작하는 값이 t이면 바꿔라.
         [type^='t'] {  
             background-color: cornsilk;
-        }
+        } */
     </style>
 </head>
+
 <body>
-    <form action="input.jsp" method="get">
-        사용자명 : <input type="text" name="user_name" id="user_name">
-        <br> 아이디 : <input type="text" name="user_id" id="user_id">
-        <br> 비밀번호 : <input type="password" name="user_pw" id="user_pw">
-        <br><input type="submit" value="입력">
-        <input type="reset" value="취소">
-    </form>
+    <div>
+        <form action="input.jsp" method="get">
+            사용자명 : <input type="text" name="user_name" id="user_name">
+            <br> &nbsp;&nbsp; 아이디 :<input type="text" name="user_id" id="user_id">
+            <br> 비밀번호 : <input type="password" name="user_pw" id="user_pw">
+            <br><input type="submit" value="입력">
+            <input type="reset" value="취소">
+        </form>
+    </div>
+
+    <!-- <script>
+        function f_submit() {
+            var 
+        }
+    </script> -->
 </body>
+
 </html>

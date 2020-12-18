@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/position.html</title>
+    <style>
+        div {
+            width: 30px;
+            height: 30px;
+            background-color: lemonchiffon;
+            color: lightblue;
+            margin-bottom: 10px;
+        }
+        .container {
+            background-color: khaki;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        .box {
+            background-color: lightblue;
+            position: relative;
+            /* static은 반영이 안 됨. relative > 상대 위치 설정 
+            absolute > (박스를 기준으로)원하는 위치 fixed > (페이지 기준, 박스 무시)고정 */
+            /* sticky > 스크롤 생성 시 고정됨. */
+            left: 15px;
+            top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <article class='container'>
+        <div></div>
+        <div class='box'>Box</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+</body>
+</html>
