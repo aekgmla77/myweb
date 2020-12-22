@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/flexbox2.html</title>
+    <style>
+        .flex-container {
+            background-color: khaki;
+            display: flex;
+            height: 200px;
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 50px;
+            margin: 10px;
+            text-align: center;
+            font-size: 30px;
+            border: 1px dotted rgb(33, 255, 74);
+            line-height: 100px;
+        }
+        .flex-container > div:nth-child(3) {
+            align-self: flex-end;
+            /* flex-shrink default = 1 */
+            /*div:nth-child(3) default = 0 >그래서 2가 처음 */
+        /* }
+        .flex-container >div:nth-child(2) {
+            flex-grow: 3; */
+            /* flex-grow > 몇 배만큼 키우겠다 */
+        /* }
+        .flex-container >div:nth-child(3) {
+            flex-grow: 2;
+        }
+        .flex-container >div:nth-child(4) {
+            flex-grow: 1;
+        } */
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
