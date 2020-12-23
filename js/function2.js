@@ -1,17 +1,28 @@
 // function nameFunc() {
 let name1 = window.prompt('숫자를 입력하세요.');
-// let name2 = window.prompt('숫자를 입력하세요.');
+let name2 = window.prompt('숫자를 입력하세요.');
 // let name1 = document.getElementById('name').value;
 
 
-diffSum(name1, name2); // 입력받은 두수 사이의 합: 1~5
-let numAry = [];
+// diffSum(name1, name2); // 입력받은 두수 사이의 합: 1~5
+// function diffSum(name1, name2){ 
+//     let sum = 0;
+//     let n1 = parseInt(name1);
+//     let n2 = parseInt(name2);
+//     for(let i = n1; i <= n2; i++) {
+//         sum += i;
+//     }
+//     document.write(sum);
+// }
 
-for (let i = 0; i < 5; i++) {
-    let name1 = window.prompt('숫자를 입력하세요.');
-    numAry[i] = parseInt(name1);
-}
-document.write(numAry[i]);
+
+// let numAry = [];
+
+// for (let i = 0; i < 5; i++) {
+//     let name1 = window.prompt('숫자를 입력하세요.');
+//     numAry[i] = parseInt(name1);
+// }
+// document.write(numAry[i]);
 
 
 // sum(name1, name2);
@@ -34,4 +45,21 @@ document.write(numAry[i]);
 //         document.write("D 입니다.");
 //     }
 // }
+checkMax(name1, name2);
+function checkMax(name1, name2) {
+   let numAry = [];
+    for (let i = 0; i <= 5; i++) {
+        let name1 = window.prompt('숫자를 입력하세요.');
+        numAry[i] = parseInt(name1);
+    }
+    document.write(numAry);
+    let Max = 0;
+    for (num of numAry) {
+        if (num > Max) {
+            Max = num;
+        }
+    }
+    document.write("Max: " + Max);
+}
+
 
