@@ -1,6 +1,6 @@
 // function nameFunc() {
 let name1 = window.prompt('숫자를 입력하세요.');
-let name2 = window.prompt('숫자를 입력하세요.');
+// let name2 = window.prompt('숫자를 입력하세요.');
 // let name1 = document.getElementById('name').value;
 
 
@@ -45,8 +45,8 @@ let name2 = window.prompt('숫자를 입력하세요.');
 //         document.write("D 입니다.");
 //     }
 // }
-checkMax(name1, name2);
-function checkMax(name1, name2) {
+checkMax(name1);
+function checkMax(name1) {
    let numAry = [];
     for (let i = 0; i <= 5; i++) {
         let name1 = window.prompt('숫자를 입력하세요.');
