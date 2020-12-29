@@ -1,26 +1,15 @@
-function getGender(num) {
-    let from = num.replace('-','').substring(6, 7);
-    if (from == 1 || from == 3) {
-        return '남자';
-    } else if (from == 2 || from == 4) {
-        return '여자';
-    } else {
-        return '잘못된 값';
-    }
+let x = 10;
+let y = '5';
+
+let result = x * y;
+// result = x / 0;
+// * / 는 알아서 숫자로 인식함.
+console.log(result);
+
+//parseint >> 정수, parsefloat >> 소수
+
+function sum() {
+    let num1 = document.getElementById('num1').value;
+    let num2 = document.getElementById('num2').value;
+    console.log(parseInt(num1)+parseInt(num2));
 }
-
-let result;
-let numbers = '990101-1234567';
-numbers += ' 990102-2345678';
-numbers += ' 001215-3154978';
-numbers += ' 000202-4894513';
-numbers += ' 0003011567890';
-
-
-let numAry = numbers.split(' ');
-for (num of numAry) {
-    result = getGender(num);
-    console.log('결과: ' + result);
-}
-
-
