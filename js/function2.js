@@ -1,5 +1,5 @@
 // function nameFunc() {
-// let name1;
+let name1;
 // let name1 = window.prompt('숫자를 입력하세요.');
 // let name2 = window.prompt('숫자를 입력하세요.');
 // let name1 = document.getElementById('name').value;
@@ -47,23 +47,24 @@
 //     }
 // }
 
-// let numAry = [];
-// for (let i = 0; i < 5; i++) {
-//     name1 = window.prompt('숫자를 입력하세요.');
-//     numAry[i] = parseInt(name1);
-// }
-// document.write(numAry);
+let numAry = [];
+for (let i = 0; i < 5; i++) {
+    name1 = window.prompt('숫자를 입력하세요.');
+    numAry[i] = parseInt(name1);
+}
+document.write(numAry);
 
-// checkMax(name1);
-// function checkMax(name1) {
-//     let Max = 0;
-//     for (num of numAry) {
-//         if (num > Max) {
-//             Max = num;
-//         }
-//     }
-//     document.write('<p>Max: <b>' + Max + '</b></p>');
-// }
+checkMax(name1);
+// 실행하라는 명령문
+function checkMax(name1) {
+    let Max = 0;
+    for (num of numAry) {
+        if (num > Max) {
+            Max = num;
+        }
+    }
+    document.write('<p>Max: <b>' + Max + '</b></p>');
+}
 
 // let friend1 = { }
 // friend1.name = 'Hong';
