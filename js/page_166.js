@@ -19,7 +19,6 @@ function drawTable() {
     input3.setAttribute('type', 'submit');
     input3.setAttribute('value','전송');
 
-
     show.append(form);
     show.append(form1);
     show.append(input3);
