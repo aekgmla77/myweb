@@ -24,12 +24,11 @@ function showCal(yyyy, mm) {
     }
     table.append(tr);
     let dates = [];
-    let first = today.getDay();
+    let first = new Date(yyyy + '-' + mm , -1);
     let today = new Date(yyyy + '-' + mm);
     today= new Date(yyyy, mm, 0);
     console.log(first);
     for (let i = 1; i <= today.getDate(); i++) {
-        let td = document.createElement('td');
         if (i % 7 == 1) {
             tr = document.createElement('tr');
         }
