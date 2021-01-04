@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean.html</title>
+</head>
+<body>
+    <script>
+        let trueOrFalse = (10 < 9);
+        trueOrFalse = null; // 값이 없으면 false, 있으면 참
+        if(trueOrFalse) {
+            console.log('true')
+        } else {
+            console.log('false');
+        }
+
+        let val1 = 100;
+        let val2 = '100';
+        if(!(val1 === val2)){ 
+            console.log('동일')
+        } else {
+            console.log('다름');
+        }
+        // === >> 값과 타입까지 비교함.
+
+
+        let result = val1 > 100 ? '100보다 크다':'100보다 작다';
+        result = new String('hello');
+        result = new Number(10);
+        result = new Object();
+
+        result = {
+            name: 'Hong',
+            age: 20,
+            getName: function(){
+                return this.name;
+            },
+            getInfo: function(){
+               console.log(this.name + ' - ' + this.age);
+                // return this.name + '-' + this.age;
+            },
+            get getAge() {
+                return this.age;
+            },
+            set setAge(age) {
+                this.age = age;
+            }
+        }
+        result.setAge = 25;
+        console.log(result.getAge);
+        result.hobby = 'reading';
+        result.getInfo();
+
+        delete result.hobby;
+        //배열일 경우 for of ..
+        //오브젝트일 경우 for in ..
+        console.log('****************************');
+        let person = {
+            name: 'Hwang',
+            age: 10,
+            address: 'Seoul'
+        }
+        let persons = [person];
+
+        let person1 = {
+            name: 'Hwang',
+            age: 10,
+            address: 'Seoul'
+        }
+        let vals = Object.values(person);
+        vals = JSON.stringify(person);
+        console.log(vals)
+
+        persons.push(person1);
+
+        for(person of persons) {
+            for(field in person) {
+                console.log(field, '-', person[field]);
+            }
+        }
+
+        // let v = result;
+        // result.age = 15;
+
+        console.log(result.name, result.age, result.hobby);
+
+        result = 'hello';
+        v = result;
+        result = 'world';
+        console.log(v);
+    </script>
+</body>
+</html>

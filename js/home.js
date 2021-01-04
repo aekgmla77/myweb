@@ -95,3 +95,51 @@ let s1 = document.getElementById('show');
             // tr.append(td4);
             // table.append(tr);
             // console.log(table);
+
+            document.getElementsByClassName('left')[0].innerHTML = 'JS 튜토리얼';
+
+            function makeMulti(val) {
+            let show = document.getElementsByClassName('show');
+            let table = document.createElement('table');
+            table.setAttribute('border', '1');
+            let tr = document.createElement('tr');
+            for (let i = val; i <= val; i++) {
+                for (let n = 1; n <= 9; n++) {
+                    tr = document.createElement('tr');
+                    let td = document.createElement('td');
+                    let td1 = document.createElement('td');
+                    let td2 = document.createElement('td');
+                    let td3 = document.createElement('td');
+                    let td4 = document.createElement('td');
+                    td.innerHTML += i;
+                    td2.innerHTML += n;
+                    td4.innerHTML = i * n;
+                    td1.innerHTML = '*'
+                    td3.innerHTML = '=';
+                    tr.append(td);
+                    tr.append(td1);
+                    tr.append(td2);
+                    tr.append(td3);
+                    tr.append(td4);
+                    table.append(tr);
+                }
+            };
+            console.log(table);
+            return table;
+        }
+        result = makeMulti(3);
+        show.append(result);
+
+
+
+        <!-- let show = document.getElementById('show');
+// show = document.getElementsByClassName('show');
+// // class name = show 인 걸 가져오는 거
+// show = document.getElementsByTagName('div');
+
+// show = document.querySelectorAll('div>h3');
+// // innerHTML(getElement~~) 과 비슷함.
+// for(let i = 0; i < show.length; i++){
+//     show[i].innerHTML = "World";
+// }
+// console.log(show); --></script>

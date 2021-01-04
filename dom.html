@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: cadetblue;
+            position: relative;
+        }
+
+        #animate {
+            width: 220px;
+            height: 50px;
+            background-color: cornsilk;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Move Start</button>
+    <p></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <script>
+        setInterval(() => {
+            document.getElementById('animate').innerHTML = new Date();
+        }, 1000);
+        let bb = document.getElementById('btn');
+        bb.onclick = moveStart;
+        //() >> 실행을 해버림. 빼면 클릭하고 실행.
+
+        function moveStart() {
+            console.log('start');
+            let ani = document.getElementById('animate');
+            let i = 0;
+            let myInterval = setInterval(function () {
+                i++;
+                ani.style.left = i * 1 + 'px';
+                ani.style.top = i * 1 + 'px';
+                if (i == 350)
+                    clearInterval(myInterval);
+            }, 35);
+        }
+    </script>
+</body>
+
+</html>
