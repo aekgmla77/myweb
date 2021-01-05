@@ -143,3 +143,49 @@ let s1 = document.getElementById('show');
 //     show[i].innerHTML = "World";
 // }
 // console.log(show); --></script>
+
+
+<script>
+let numbers = [4, 3, 9, 3, 2, 27, 1];
+let x = numbers[0];
+for(let i = 0; i < numbers.length; i++){
+    if(x < numbers[i] || x > numbers[i]){
+        x = numbers[i];
+    }
+    console.log(x);
+}
+</script>
+
+
+
+if(xhtp.readyState == 4 && xhtp.status ==200) {
+    // console.log(xhtp.responseXML);
+    let doc = xhtp.responseXML;
+    let result = doc.querySelectorAll('dataset > record');
+    let ulTag = document.createElement('ul');
+    let table = document.createElement('table');
+    table.setAttribute('border', '1');
+    let tr = document.createElement('tr');
+    let names = ['번호', '성', '이름', '이메일', '성별', 'IP'];
+    for(name of names){
+        let th = document.createElement('th');
+        th.innerHTML += name;
+        tr.appendChild(th);
+    }
+    table.appendChild(tr);
+    for(let i = 0; i < result.length; i++){
+        tr = document.createElement('tr');
+        for(let j = 0; j < result[i].childNodes.length; j++){
+            let td = document.createElement('td');
+            let str = result[i].childNodes[j].childNodes[0].nodeValue;
+            let textNode = document.createTextNode(str);
+            td.appendChild(textNode);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+        // result[i].childNodes[1].childNodes[0].nodeValue;
+    }
+    let show = document.getElementById('show');
+    show.appendChild(table);
+    // show.innerHTML = xhtp.responseText;
+}

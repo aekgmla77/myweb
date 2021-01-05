@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [4, 3, 9, 3, 2, 27, 1];
+        let x = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            // if (x < numbers[i]) 
+            //         x = numbers[i];
+            //         console.log(x)
+            for (let j = 1; j < numbers.length; j++) {
+               if(x < numbers[i]){
+                numbers[i] = numbers[j];
+                x = numbers[i];
+                }
+            }
+        }
+        console.log(x);
+    </script>
+</body>
+
+</html>
